@@ -1,8 +1,11 @@
 import React from 'react'
-import HelloWorld from '../components/HelloWorld'
 
 const HomePage = () => {
-  return <HelloWorld />
+  return (
+    <>
+      <h1>HELLO</h1>
+    </>
+  )
 }
 
 export default HomePage
