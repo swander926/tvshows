@@ -1,7 +1,8 @@
 import React from 'react'
+import Shows from '../components/Shows'
 
 const ShowPage = () => {
-  return <div>This is a Page</div>
+  return <Shows />
 }
 
 export default ShowPage
