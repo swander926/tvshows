@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Shows = () => {
-  return <div>Hello, World!</div>
+  return <h1>Show Details</h1>
 }
 
 export default Shows
