@@ -4,7 +4,7 @@ import ShowPage from './ShowPage'
 import NotFound from './NotFound'
 import axios from 'axios'
 import Shows from '../components/Shows'
-import SingleShow from '../components/SingleShow'
+// import SingleShow from '../components/SingleShow'
 
 const HomePage = () => {
   const [shows, getShows] = useState([])
@@ -20,9 +20,10 @@ const HomePage = () => {
   }, [])
   return (
     <>
-      <h1> PLEASE HELP</h1>
-      <h2> is there anybody</h2>
+      {/* <Router> */}
+      <h1>TOP RATED TELEVISION</h1>
       <ul>
+        {/* <ul>does map need to be in an ul ? */}
         {shows.map(Show => {
           return (
             <Shows
@@ -37,5 +38,13 @@ const HomePage = () => {
     </>
   )
 }
+// {
+//   /* <Switch>
+//           <Route exact path="/" component={HomePage}></Route>
+//           <Route exact path="/ShowPage" component={ShowPage}></Route>
+//           <Route path="*" component={NotFound}></Route>
+//         </Switch>
+//       </Router> */
+// }
 
 export default HomePage
