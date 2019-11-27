@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
 import ShowPage from './ShowPage'
 import NotFound from './NotFound'
 import axios from 'axios'
+import Shows from '../components/Shows'
 
 const HomePage = () => {
   const [shows, setShows] = useState([])
@@ -20,6 +21,21 @@ const HomePage = () => {
     <>
       <h1> PLEASE HELP</h1>
       <h2> is there anybody</h2>
+      <ul>
+        {shows.map(Show => {
+        return (
+        <Shows
+        key = {Show.id}
+        img = {Show.poster_path}
+        title = {Show.name}
+        overview = {Show.overview}
+
+          />
+
+        )
+        }
+        ) }
+      </ul>
     </>
   )
 }
