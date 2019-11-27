@@ -1,9 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+<<<<<<< HEAD
 
+=======
+>>>>>>> 0383f592f131b5adc4bafea6cf7f592bf2eaa064
 const Shows = props => {
   // const filePath = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2/'
-
   return (
     <>
       <div className="tvContainer">
@@ -33,5 +35,4 @@ const Shows = props => {
     </>
   )
 }
-
 export default Shows
