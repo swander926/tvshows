@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from 'react'
-import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
-import ShowPage from './ShowPage'
-import NotFound from './NotFound'
+import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import axios from 'axios'
 import Shows from '../components/Shows'
 // import SingleShow from '../components/SingleShow'
@@ -20,10 +18,9 @@ const HomePage = () => {
   }, [])
   return (
     <>
-      {/* <Router> */}
       <h1>TOP RATED TELEVISION</h1>
+      {/* <ul>does map need to be in an ul ? */}
       <ul>
-        {/* <ul>does map need to be in an ul ? */}
         {shows.map(Show => {
           return (
             <Shows
@@ -38,13 +35,17 @@ const HomePage = () => {
     </>
   )
 }
-// {
-//   /* <Switch>
-//           <Route exact path="/" component={HomePage}></Route>
-//           <Route exact path="/ShowPage" component={ShowPage}></Route>
-//           <Route path="*" component={NotFound}></Route>
-//         </Switch>
-//       </Router> */
-// }
 
 export default HomePage
+
+// import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
+// maybe we need this?
+{
+  /* <BrowserRouter>
+        <Switch>
+          <Route exact path="/" component={HomePage}></Route>
+          <Route exact path="/:category" component={ShowPage}></Route>
+          <Route path="*" component={NotFound}></Route>
+        </Switch>
+      </BrowserRouter> */
+}
