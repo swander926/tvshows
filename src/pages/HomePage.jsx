@@ -24,6 +24,7 @@ const HomePage = () => {
         {shows.map(Show => {
           return (
             <Shows
+              id={Show.id}
               key={Show.id}
               img={Show.poster_path}
               name={Show.name}

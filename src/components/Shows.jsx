@@ -1,22 +1,18 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-<<<<<<< HEAD
-
-=======
->>>>>>> 0383f592f131b5adc4bafea6cf7f592bf2eaa064
 const Shows = props => {
   // const filePath = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2/'
   return (
     <>
       <div className="tvContainer">
         <section className="tvSection">
-          <Link to="/:id">
+          <Link to={`/${props.id}`}>
             <h2>{props.name}</h2>
           </Link>
           <ul className="tvList">
             <li>{props.key}</li>
             <li>
-              <Link to="/:id">
+              <Link to={`/${props.id}`}>
                 <img
                   src={
                     'https://image.tmdb.org/t/p/w185_and_h278_bestv2/' +
