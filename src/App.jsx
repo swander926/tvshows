@@ -6,6 +6,17 @@ import HomePage from './pages/HomePage'
 import NotFound from './pages/NotFound'
 
 const App = () => {
+  const [shows, setShows] = useState([])
+  const getDataFromApi = async () => {
+    const resp = await axios.get(
+      'https://api.themoviedb.org/3/tv/top_rated?api_key=0bc0728f34b625ce3a0ce16d93e6973e&language=en-US&page=1'
+    )
+    console.log(resp)
+    setSereis(resp.data.results)
+
+    useEffect(() => {
+      getDataFromApi()
+    }, [])
   return (
     <Router>
       <header>
@@ -21,6 +32,17 @@ const App = () => {
             <li>
               <Link to="/2">Page 2</Link>
             </li>
+            {moveis.map(Shows => {
+          return (
+            <ShowPage
+              key={Shows.id}
+              title={Shows.original_name}
+              overview={Shows.overview}
+              image={Shows.poster_path}
+              
+            />
+          )
+        })}
           </ul>
         </nav>
       </header>
