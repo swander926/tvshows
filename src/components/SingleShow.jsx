@@ -23,10 +23,28 @@ const SingleShow = props => {
   if (tvShow) {
     return (
       <>
-        <h1>IS THERE ANYBODY OUT THERE: {tvShow.original_name}</h1>
+        <h1>{tvShow.original_name}</h1>
         <h1>
           <img src={`https://image.tmdb.org/t/p/w500` + tvShow.poster_path} />
         </h1>
+        <ul>
+          Casttttttt
+          {castInfo.map((castList, index) => {
+            return (
+              <li id={index}>
+                {castList.name + ' '}
+                as
+                <img
+                  src={
+                    'https://image.tmdb.org/t/p/w185_and_h278_bestv2' +
+                    castList.profile_path
+                  }
+                />
+              </li>
+            )
+          })}
+        </ul>
+        {/* how does this map work */}
       </>
     )
   } else {

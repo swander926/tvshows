@@ -6,6 +6,7 @@ import Shows from '../components/Shows'
 
 const HomePage = () => {
   const [shows, getShows] = useState([])
+
   const getDataFromApi = async () => {
     const resp = await axios.get(
       'https://api.themoviedb.org/3/tv/top_rated?api_key=0bc0728f34b625ce3a0ce16d93e6973e&language=en-US&page=1'
@@ -13,9 +14,11 @@ const HomePage = () => {
     console.log(resp)
     getShows(resp.data.results)
   }
+
   useEffect(() => {
     getDataFromApi()
   }, [])
+
   return (
     <>
       <h1>TOP RATED TELEVISION</h1>
