@@ -9,11 +9,9 @@ const App = () => {
   return (
     <>
       <BrowserRouter>
-        <HomePage />
         <Switch>
           <Route exact path="/" component={HomePage}></Route>
-          <Route exact path="/:category" component={ShowPage}></Route>
-          <Route exact path="/pizza" component={SingleShow}></Route>
+          <Route exact path="/:id" component={ShowPage}></Route>
         </Switch>
       </BrowserRouter>
     </>

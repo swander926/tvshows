@@ -1,8 +1,8 @@
 import React from 'react'
-import Shows from '../components/Shows'
+import SingleShow from '../components/SingleShow'
 
-const ShowPage = () => {
-  return <Shows />
+const ShowPage = props => {
+  return <SingleShow showId={props.match.params.id} />
 }
 
 export default ShowPage
