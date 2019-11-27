@@ -4,6 +4,7 @@ import ShowPage from './ShowPage'
 import NotFound from './NotFound'
 import axios from 'axios'
 import Shows from '../components/Shows'
+import SingleShow from '../components/SingleShow'
 
 const HomePage = () => {
   const [shows, getShows] = useState([])
