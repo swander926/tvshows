@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
-
 // //is this API call to get a single ID, and then pass into this component?
 const SingleShow = props => {
   const [castInfo, getCastInfo] = useState([])
@@ -28,7 +27,7 @@ const SingleShow = props => {
           <img src={`https://image.tmdb.org/t/p/w500` + tvShow.poster_path} />
         </h1>
         <ul>
-          Casttttttt
+          Cast
           {castInfo.map((castList, index) => {
             return (
               <li id={index}>
