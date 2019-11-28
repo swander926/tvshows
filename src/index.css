@@ -10,8 +10,8 @@ body {
   margin: 0;
   margin-top: 5rem;
   min-height: 100%;
-  background-image: url(./images/darkpaper.jpg);
-  background-color: black;
+  /* background-image: url(./images/darkpaper.jpg); */
+  background-color: rgb(102, 125, 138);
   color: white;
 }
 
@@ -19,7 +19,7 @@ body {
   display: flex;
   justify-content: center;
   width: 100%;
-  border: solid red 2px;
+  /* border: solid red 2px; */
 }
 
 .tvSection {
@@ -27,12 +27,18 @@ body {
   flex-flow: column;
   align-items: center;
   list-style: none;
-  width: 30%;
-  border: solid green 2px;
-  border-radius: 25px 25px 25px 25px;
-  border: solid grey 4px;
-  background-color: rgb(38, 41, 33);
+  width: 100%;
+  /* border-radius: 25px 25px 25px 25px;
+  border: solid grey 4px; */
+  background-color: rgb(40, 50, 56);
   opacity: 0.808;
+  /* border: solid green 2px; */
+}
+
+.tvBackground {
+  width: 70%;
+  background-color: rgb(40, 50, 56);
+  /* border-radius: 25px 25px 25px 25px; */
 }
 
 h1 {
@@ -46,7 +52,8 @@ h1 {
 h2 {
   justify-content: center;
   text-align: center;
-  font-size: 3rem;
+  font-size: 40px;
+  text-decoration: underline;
 }
 
 .tvList {
@@ -55,10 +62,20 @@ h2 {
   align-items: center;
   list-style: none;
   padding: 0;
-  border: solid blue 2px;
+  /* border: solid blue 2px; */
+}
+
+a {
+  text-decoration: none;
+  color: white;
 }
 
 li {
   margin-top: 0.5rem;
   margin-bottom: 2rem;
+}
+
+.paraGraph {
+  font-size: 18px;
+  width: 75%;
 }

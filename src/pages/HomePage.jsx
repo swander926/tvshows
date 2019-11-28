@@ -41,15 +41,3 @@ const HomePage = () => {
 }
 
 export default HomePage
-
-// import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
-// maybe we need this?
-{
-  /* <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={HomePage}></Route>
-          <Route exact path="/:category" component={ShowPage}></Route>
-          <Route path="*" component={NotFound}></Route>
-        </Switch>
-      </BrowserRouter> */
-}
