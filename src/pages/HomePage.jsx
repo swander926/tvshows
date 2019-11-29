@@ -48,15 +48,10 @@ const HomePage = () => {
 }
 
 export default HomePage
-
-// import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
-// maybe we need this?
 {
-  /* <BrowserRouter>
-        <Switch>
-          <Route exact path="/" component={HomePage}></Route>
-          <Route exact path="/:category" component={ShowPage}></Route>
-          <Route path="*" component={NotFound}></Route>
-        </Switch>
-      </BrowserRouter> */
+  /* <p className="topParagraph">
+                  Here is a list of the top 20 rated TV series by The Movie
+                  Database, based on the highest vote average. Hope you enjoy!
+                </p> */
 }
+// how to place this inside dark green only 1 time
