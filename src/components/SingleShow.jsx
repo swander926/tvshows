@@ -24,6 +24,9 @@ const SingleShow = props => {
   if (tvShow) {
     return (
       <>
+      <header>
+      <a href="/">Home</a>
+      </header>
         <div className="singleshowContainer">
           <h1>{tvShow.original_name}</h1>
           <h1>
