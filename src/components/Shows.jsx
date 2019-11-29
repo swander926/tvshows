@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 
 const Shows = props => {
   // const filePath = 'https://image.tmdb.org/t/p/w185_and_h278_bestv2/'
-
   return (
     <>
       <div className="tvContainer">
@@ -11,6 +10,7 @@ const Shows = props => {
           <section className="tvSection">
             <ul className="tvList">
               <li>{props.key}</li>
+              {/* what is props.key */}
               <li>
                 <Link to={`/${props.id}`}>
                   <img
@@ -29,8 +29,12 @@ const Shows = props => {
               <h2>{props.name}</h2>
             </Link>
             <p className="paraGraph">{props.overview}</p>
+            <br></br>
+            <br></br>
           </section>
-          <hr></hr>
+          <hr className="breakline" width="700px"></hr>
+          <br></br>
+          <br></br>
         </div>
       </div>
     </>

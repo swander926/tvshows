@@ -21,23 +21,37 @@ const HomePage = () => {
 
   return (
     <>
-      <h1>TOP RATED TELEVISION</h1>
-      {/* <ul>does map need to be in an ul ? */}
-      <ul>
-        {shows.map(Show => {
-          return (
-            <Shows
-              id={Show.id}
-              key={Show.id}
-              img={Show.poster_path}
-              name={Show.name}
-              overview={Show.overview}
-            />
-          )
-        })}
-      </ul>
+      <h1>Top Rated Television</h1>
+      <br></br>
+
+      <div className="homepageContainer">
+        {/* <ul>does map need to be in an ul ? */}
+        <ul>
+          {shows.map(Show => {
+            return (
+              <>
+                <Shows
+                  id={Show.id}
+                  key={Show.id}
+                  img={Show.poster_path}
+                  name={Show.name}
+                  overview={Show.overview}
+                />
+                {/*  */}
+              </>
+            )
+          })}
+        </ul>
+      </div>
     </>
   )
 }
 
 export default HomePage
+{
+  /* <p className="topParagraph">
+                  Here is a list of the top 20 rated TV series by The Movie
+                  Database, based on the highest vote average. Hope you enjoy!
+                </p> */
+}
+// how to place this inside dark green only 1 time

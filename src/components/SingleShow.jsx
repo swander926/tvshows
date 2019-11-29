@@ -23,32 +23,34 @@ const SingleShow = props => {
   if (tvShow) {
     return (
       <>
-        <h1>{tvShow.original_name}</h1>
-        <h1>
-          <img
-            src={`https://image.tmdb.org/t/p/w500` + tvShow.poster_path}
-            height="600px"
-            width="450px"
-            alt="TV Poster Image"
-          />
-        </h1>
-        <ul>
-          Cast
-          {castInfo.map((castList, index) => {
-            return (
-              <li id={index}>
-                {castList.name + ' '}
-                as
-                <img
-                  src={
-                    'https://image.tmdb.org/t/p/w185_and_h278_bestv2' +
-                    castList.profile_path
-                  }
-                />
-              </li>
-            )
-          })}
-        </ul>
+        <div className="singleshowContainer">
+          <h1>{tvShow.original_name}</h1>
+          <h1>
+            <img
+              src={`https://image.tmdb.org/t/p/w500` + tvShow.poster_path}
+              height="600px"
+              width="450px"
+              alt="TV Poster Image"
+            />
+          </h1>
+          <h2>Cast</h2>
+          <ul className="castBox">
+            {castInfo.map((castList, index) => {
+              return (
+                <li id={index}>
+                  {castList.name + ' '}
+
+                  <img
+                    src={
+                      'https://image.tmdb.org/t/p/w185_and_h278_bestv2' +
+                      castList.profile_path
+                    }
+                  />
+                </li>
+              )
+            })}
+          </ul>
+        </div>
         {/* how does this map work */}
       </>
     )
