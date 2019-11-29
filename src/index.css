@@ -21,7 +21,13 @@ body {
   width: 100%;
   border: solid red 2px;
 }
-
+.randomTvContainer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border: solid red 2px;
+  background-color: blue;
+}
 .tvSection {
   display: flex;
   flex-flow: column;
@@ -61,4 +67,17 @@ h2 {
 li {
   margin-top: 0.5rem;
   margin-bottom: 2rem;
+}
+
+a {
+  font-size: 1.5rem;
+  color: blanchedalmond;
+  padding-left: 1rem;
+  display: flex;
+  padding-top: 10px;
+}
+
+header {
+  position: absolute;
+  top: 0;
 }

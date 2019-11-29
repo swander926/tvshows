@@ -17,12 +17,17 @@ const SingleShow = props => {
       getCastInfo(response.data.cast)
     }
     getDataFromApi()
+    console.log(props.showId)
   }, [props.showId])
 
   if (tvShow) {
     return (
       <>
-        <h1>{tvShow.original_name}</h1>
+      <header>
+      <a href="/">HOME</a>
+      </header>
+    
+      <h1>{tvShow.original_name}</h1> 
         <h1>
           <img src={`https://image.tmdb.org/t/p/w500` + tvShow.poster_path} />
         </h1>
