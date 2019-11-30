@@ -21,13 +21,22 @@ body {
   width: 100%;
   /* border: solid red 2px; */
 }
+
 .randomTvContainer {
   display: flex;
   justify-content: center;
   width: 100%;
-  border: solid red 2px;
+  /* border: solid red 2px; */
+  /* background-color: blue; */
+}
+
+.randomTvColor {
+  display: flex;
+  justify-content: center;
+  width: 100%;
   background-color: blue;
 }
+
 .tvSection {
   display: flex;
   flex-flow: column;
@@ -86,19 +95,29 @@ li {
   font-size: 18px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
     'Lucida Sans', Arial, sans-serif;
-  width: 75%;
+  width: 60%;
+  text-align: center;
 }
 
 .breakline {
   border-radius: 5px;
 }
 
+.castContainer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* border: 2px solid orange; */
+}
+
 .castBox {
   display: flex;
   flex-flow: row;
   flex-wrap: wrap;
-  width: 100%;
+  justify-content: center;
+  width: 60%;
   background-color: rgb(40, 50, 56);
+  /* border: 2px solid fuchsia; */
 }
 
 .singleshowContainer {
@@ -106,10 +125,27 @@ li {
   flex-direction: column;
   background-color: rgb(40, 50, 56);
   width: 100%;
+  /* border: 2px solid greenyellow; */
 }
 
-header {
+/* header {
   background-color: rgb(40, 50, 56);
+} */
+
+.homeButtonTop {
+  width: 92%;
+  color: red;
+  text-align: center;
+  padding-bottom: 2rem;
+  padding-top: 1.5rem;
+}
+
+.homeButtonBottom {
+  width: 92%;
+  color: red;
+  text-align: center;
+  padding-bottom: 2rem;
+  padding-top: 1.5rem;
 }
 
 /* how can i shrink the width of the dark green? too many containers */

@@ -26,7 +26,7 @@ const HomePage = () => {
 
   return (
     <>
-      <h1>TOP RATED TELEVISION {random.id}</h1>
+      <h1>TOP RATED TELEVISION</h1>
       {/* <ul>does map need to be in an ul ? */}
       <ul>
         {shows.map(Show => {
