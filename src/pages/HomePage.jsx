@@ -2,21 +2,18 @@ import React, { useState, useEffect } from 'react'
 import { BrowserRouter, Route, Switch } from 'react-router-dom'
 import axios from 'axios'
 import Shows from '../components/Shows'
-// import SingleShow from '../components/SingleShow'
+import { Link } from 'react-router-dom'
 
 const HomePage = () => {
-  const [random, getRandom] = useState([])
-  const [shows, getShows] = useState([])
+  const [random, getRandom] = useState() //hook using state
+  const [shows, getShows] = useState([]) //hook using state
+  const featuredTvShow = shows[random]
   const getDataFromApi = async () => {
     const resp = await axios.get(
       'https://api.themoviedb.org/3/tv/top_rated?api_key=0bc0728f34b625ce3a0ce16d93e6973e&language=en-US&page=1'
     )
     const response = resp.data.results
-    // console.log(response)
-    const random = response[Math.floor(Math.random() * response.length)]
-    const index = random.id
-    // console.log(random)
-    // console.log(index)
+    const random = [Math.floor(Math.random() * response.length)]
     getShows(resp.data.results)
     getRandom(random)
   }
@@ -24,27 +21,56 @@ const HomePage = () => {
     getDataFromApi()
   }, [])
 
+  shows.splice(random, 1)
   return (
     <>
       <h1>TOP RATED TELEVISION</h1>
+      <ul className="featured">
+        <section className="featuredSection">
+          {featuredTvShow && (
+            <li className="featuredTvShow" key={featuredTvShow.id}>
+              <Link
+                to={`/${featuredTvShow.id}`}
+                style={{ textDecoration: 'none' }}
+              >
+                <p className="featuredTvShowText">{featuredTvShow.name}</p>
+              </Link>
+              <Link to={`/${featuredTvShow.id}`}>
+                <img
+                  className="featuredImage"
+                  alt=""
+                  src={
+                    'https://image.tmdb.org/t/p/w185_and_h278_bestv2' +
+                    featuredTvShow.poster_path
+                  }
+                />
+              </Link>
+              <p className="featuredRating">
+                Rating: {featuredTvShow.vote_average}
+              </p>
+            </li>
+          )}
+        </section>
+      </ul>
+
       {/* <ul>does map need to be in an ul ? */}
       <ul>
-        {shows.map(Show => {
+        {shows.map((Show, index) => {
           return (
+            /*how is i not equal to random */
             <Shows
               id={Show.id}
               key={Show.id}
               img={Show.poster_path}
               name={Show.name}
               overview={Show.overview}
-              random={random.id}
+              // random={random.id}
             />
           )
         })}
       </ul>
     </>
   )
-  console.log(random)
 }
 
 export default HomePage
