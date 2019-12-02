@@ -75,6 +75,16 @@ body {
   background-color: rgb(40, 50, 56);
 }
 
+.featuredRating {
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.featuredImage {
+  height: 400px;
+  width: 300px;
+}
+
 .tvBackground {
   width: 70%;
   background-color: rgb(40, 50, 56);
@@ -169,7 +179,6 @@ li {
   text-align: center;
   padding-bottom: 2rem;
   padding-top: 1.5rem;
- 
 }
 
 .homeButtonBottom {
@@ -180,30 +189,20 @@ li {
   padding-top: 1.5rem;
 }
 
-
 img {
-
-margin-right: 4.9rem;
-
+  margin-right: 4.9rem;
 }
 
-.singleimage{
- margin-left: 6rem;
+.singleimage {
+  margin-left: 6rem;
 }
-
 
 .singlecast {
-
-margin-left: 4rem;
-
+  margin-left: 4rem;
 }
-
 
 li {
   list-style-type: none;
 }
-
-
-
 
 /* how can i shrink the width of the dark green? too many containers */
