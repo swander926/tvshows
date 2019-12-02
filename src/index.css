@@ -66,12 +66,12 @@ body {
 .featuredSection {
   display: flex;
   flex-flow: column;
-  width: 68%;
+  width: 66%;
   justify-content: center;
   align-items: center;
   border: solid purple 2px;
   padding: 0;
-  margin: 0;
+  margin-right: 2.7rem;
   background-color: rgb(40, 50, 56);
 }
 
@@ -92,6 +92,7 @@ h1 {
 h2 {
   justify-content: center;
   text-align: center;
+  margin-right: 4.2rem;
   font-size: 37px;
   text-decoration: underline;
 }
@@ -168,6 +169,7 @@ li {
   text-align: center;
   padding-bottom: 2rem;
   padding-top: 1.5rem;
+ 
 }
 
 .homeButtonBottom {
@@ -177,5 +179,31 @@ li {
   padding-bottom: 2rem;
   padding-top: 1.5rem;
 }
+
+
+img {
+
+margin-right: 4.9rem;
+
+}
+
+.singleimage{
+ margin-left: 6rem;
+}
+
+
+.singlecast {
+
+margin-left: 4rem;
+
+}
+
+
+li {
+  list-style-type: none;
+}
+
+
+
 
 /* how can i shrink the width of the dark green? too many containers */
